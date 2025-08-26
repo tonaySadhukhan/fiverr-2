@@ -4,11 +4,7 @@ const bodyParser=require('body-parser');
 const cors=require('cors');
 const db=require('./db');
 
-app.use(cors({
-  origin: 'http://127.0.0.1:5500',  // or http://localhost:5500
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}));
+app.use(cors());
 app.use(bodyParser.json());
 
 // --- Inventory API ---
@@ -139,3 +135,4 @@ app.listen(process.env.port,()=>{
     console.log('Server is running on http://localhost:3000');
 
 });
+
