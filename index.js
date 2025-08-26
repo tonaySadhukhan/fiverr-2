@@ -135,6 +135,7 @@ app.get('/',(req,res)=>{
 
 // module.exports = app;
 
-app.listen(27017,()=>{
+app.listen(process.env.port,()=>{
     console.log('Server is running on http://localhost:3000');
+
 });
